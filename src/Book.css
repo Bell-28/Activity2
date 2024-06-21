@@ -1,0 +1,208 @@
+.books-container {
+    display: flex;
+    flex-wrap: wrap; /* Ensures content wraps if there's not enough space */
+    gap: 20px; /* Adds space between the book elements */
+  }
+  
+  .book {
+    position: relative;
+    border-radius: 10px;
+    width: 520px;
+    height: 600px;
+    background-color: #436850;
+    box-shadow: 1px 1px 12px #000;
+    transform: preserve-3d;
+    perspective: 2000px;
+    display: flex;
+    align-items: center;
+    color: #fbfada;
+    flex-direction: column; /* Added to stack h3 above p */
+  }
+  
+  .cover {
+    top: 0;
+    position: absolute;
+    background-color: #3c4b46;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+    transform-origin: 0;
+    box-shadow: 1px 1px 12px #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fbfada;
+  }
+  
+  .book:hover .cover {
+    transition: all 0.5s;
+    transform: rotateY(-80deg);
+  }
+  
+  .book > h3 {
+    padding-top: 100px;
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #fdfdfd;
+  }
+  
+  .book > p {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+  }
+  
+  .link {
+    position: absolute;
+    top: 45px;
+    left: 28%;
+  }
+  
+  .profile-pic {
+    position: absolute;
+    top: 45px; /* Adjust position as needed */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .Btn {
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    position: absolute;
+    background: #f09433;
+    background: -moz-linear-gradient(
+      45deg,
+      #f09433 0%,
+      #e6683c 25%,
+      #dc2743 50%,
+      #cc2366 75%,
+      #bc1888 100%
+    );
+    background: -webkit-linear-gradient(
+      45deg,
+      #f09433 0%,
+      #e6683c 25%,
+      #dc2743 50%,
+      #cc2366 75%,
+      #bc1888 100%
+    );
+    background: linear-gradient(
+      45deg,
+      #f09433 0%,
+      #e6683c 25%,
+      #dc2743 50%,
+      #cc2366 75%,
+      #bc1888 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(
+      startColorstr='#f09433',
+      endColorstr='#bc1888',
+      GradientType=1
+    );
+    overflow: hidden;
+  }
+  
+  .svgIcon {
+    transition-duration: 0.3s;
+  }
+  
+  .svgIcon path {
+    fill: white;
+  }
+  
+  .text {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    width: 120px;
+    font-weight: 600;
+    opacity: 0;
+    transition-duration: 0.4s;
+    font-size: 17px;
+  }
+  
+  .Btn:hover {
+    width: 110px;
+    transition-duration: 0.4s;
+    border-radius: 30px;
+  }
+  
+  .Btn:hover .text {
+    opacity: 1;
+    transition-duration: 0.4s;
+  }
+  
+  .Btn:hover .svgIcon {
+    opacity: 0;
+    transition-duration: 0.3s;
+  }
+  
+  .button {
+    top: 55px;
+    width: 45px;
+    height: 45px;
+    background-color: #3b5998;
+    border: none;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding-bottom: 3px;
+  }
+  
+  .button::before {
+    background-color: transparent;
+    content: "f";
+    font-size: 1.6em;
+    font-weight: 700;
+    color: white;
+    z-index: 5;
+    transition: all 0.3s;
+    font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+      Helvetica, Arial, sans-serif;
+  }
+  
+  .button::after {
+    content: "acebook";
+    background-color: transparent;
+    font-size: 0;
+    opacity: 0;
+    font-weight: 700;
+    color: white;
+    z-index: 5;
+    transition: all 0.3s;
+    transform: translateX(60px);
+    font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+      Helvetica, Arial, sans-serif;
+  }
+  
+  .button:hover {
+    width: 160px;
+    border-radius: 30px;
+  }
+  
+  .button:hover::after {
+    opacity: 1;
+    font-size: 1.6em;
+    transform: translateX(0px);
+  }
+  
+  .button:hover .shine {
+    transform: translate(-70px, 10px);
+  }
+  
